@@ -11,7 +11,7 @@
         -src
             -App.css         (App コンポーネント　スタイル)
             -App.js          (App コンポーネント　本体)
-            -App .test.js    (App コンポーネント　テストコード)
+            -App.test.js    (App コンポーネント　テストコード)
             -index.css       (アプリ共通　スタイル)
             -index.js        (起動ファイル)
             -logo.svg        (ロゴ画像)
@@ -47,9 +47,13 @@
 
 ## 見た目を持たないコンポーネント
     <React.StrictMode>=厳格モード機能
-    <React.Fragment>  =
-    <RecoilRoot>      =
-    <RouterProvider>  =
+    <React.Fragment>  =<>短縮系
+    <RecoilRoot>      =状態管理ライブラリimport { RecoilRoot } from 'recoil';が必要
+    <RouterProvider>  =RouterProvider（推測された名称ですが、react-router の Router と関連？
+                        react-router は、React アプリケーションでのルーティングを簡素化するためのライブラリ
+                        RouterProvider は、通常 react-router の BrowserRouter や HashRouter などのルーターコンポーネントの一種で
+                        アプリケーション内でのページのナビゲーションを可能とする
+
 
 
 
