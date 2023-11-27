@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// list2-2-2(p55)1123
 
+
+import React from 'react';                        // React本体ライブラリ
+import ReactDOM from 'react-dom/client';          // React本体ライブラリ
+import './index.css';                             // アプリ固有
+import App from './App';                          // アプリ固有
+import reportWebVitals from './reportWebVitals';  // パフォーマンス監視サービス
+
+// 描画：<React.StrictMode>厳格モードでAppコンポーネントを実行してroot要素に描画させる
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <p>Hello!World!</p>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// 有効化：パフォーマンス監視サービス
+reportWebVitals(); // ()内にconsole.logを記述でロギング可能

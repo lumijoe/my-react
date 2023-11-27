@@ -1,0 +1,55 @@
+## npm start起動、自動ブラウザ起動、停止はctrl+c
+## ツリー構造(npx creat-react-app のデフォルト)
+    my-react
+        -node_modules(ライブライ一式、基本触るのNG)
+        -public 
+            -favicon.ico　　 (ファビコン)
+            -index.html     (トップページ) 
+            -logoxxx.png    (ロゴ画像)
+            -manifest.json  (アプリ構成情報)-ネイティブアプリをmobileUIとして設定する系
+                https://developer.mozilla.org/ja/docs/Web/Manifest
+        -src
+            -App.css         (App コンポーネント　スタイル)
+            -App.js          (App コンポーネント　本体)
+            -App .test.js    (App コンポーネント　テストコード)
+            -index.css       (アプリ共通　スタイル)
+            -index.js        (起動ファイル)
+            -logo.svg        (ロゴ画像)
+            -reportWebVitals.js (パフォーマンス監視のためのサービス)
+            -setupTests.js   (テストの初期設定)
+        -package.json        (パッケージ情報)
+
+
+## Npm Scripts(package.jsonで設定されている)
+    1： npm run buildコマンド(ビルド)
+        -実行可能な状態にトランスパイル&バンドルし
+        -本番環境にデプロイ（配置）するためのファイル一式をbuildフォルダとして生成
+        -ファイル丸ごと公開フォルダに配置すればアプリ実行可能となる
+    2： npm run ejectコマンド(webpack/Babelをカスタム設定編集するための出力)
+        -config, scriptフォルダに標準の設定ファイルを出力、それで編集可能
+        -上級者向けコマンド（一般的に標準設定で十分）
+    3： npm run testコマンド（テスト）
+    4： npm start　または npm run start (開発のための起動)
+
+
+## React18以降
+    old: import ReactDOM from 'react-dom'; 
+    -18: import ReactDOM from 'react-dom/client';
+
+    old: ReactDOM.render(<App />, document.getElementById('root'));
+    -18: const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(
+                <React.StrictMode>
+                <App />
+                </React.StrictMode>
+            );
+
+
+## 見た目を持たないコンポーネント
+    <React.StrictMode>=厳格モード機能
+    <React.Fragment>  =
+    <RecoilRoot>      =
+    <RouterProvider>  =
+
+
+
